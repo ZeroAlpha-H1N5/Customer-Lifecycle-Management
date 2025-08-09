@@ -1,0 +1,77 @@
+.login-body {
+    background-color: #d7e3fc; 
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    background-color: #fbffbe; /* Slightly lighter blue box */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 300px; /* Adjust width as needed */
+}
+
+.login-logo-container {
+    margin-bottom: 70px; /* Spacing between logo and form */
+    text-align: center; /* Center the logo horizontally */
+}
+
+.login-logo-container img {
+    max-width: 300px; /* Adjust size as needed */
+    height: auto;
+    display: block; /* Remove any extra space below the image */
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #edf2fb; /* Yellow input background */
+    color: #333; /* Dark text color */
+    box-sizing: border-box;
+    text-align: center; /* Center the placeholder text */
+    box-shadow: 5px 5px #181d6b;
+}
+
+::placeholder { /* Styling the placeholder text */
+    color: #333;
+    opacity: 0.7; /* Make the placeholder text slightly transparent */
+    text-align: center; /* Center placeholder text in Chrome/Edge/Safari */
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"] {
+    background-color: #abc4ff; /* Yellow input background */
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* Dark text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto; /* Center the button */
+    box-shadow: 5px 5px #212AA5;  
+}
+
+input:hover {
+    background-color: #edf2fb; /* Yellow input background */
+    color: #333; /* Dark text color */
+}
+
+p[style="color: red;"] {
+    text-align: center;
+    margin-bottom: 15px;
+}

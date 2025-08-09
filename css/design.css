@@ -1,0 +1,1373 @@
+/* General page reset */
+body, html {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #181d6b;
+}
+
+.h2 {
+    display: flex;
+    text-align: left;
+}
+
+.contracts-expiring {
+    position: relative;
+    margin-right:10px; 
+    font-weight:normal;
+}
+
+/* h2 highlight  */
+.highlighted-title {
+    background-color: #d7e3fc; 
+    padding: 10px 20px;      
+    border-radius: 20px;      
+}
+
+.logo-container {
+    margin-bottom: 10px; 
+    text-align: center; /* Center the logo horizontally */
+}
+
+.logo-container img {
+    max-width: 150px;  
+    height: 100px;  
+    display: block; 
+    margin-left: 20px; 
+}
+
+textarea {
+    width: 100%;             
+    padding: 8px;             
+    border: 1px solid #ccc;    
+    border-radius: 4px;      
+    box-sizing: border-box;    
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 14px;           
+    resize: none;  
+}
+
+/* Main Content Styling */
+.content {
+    margin-left: 200px;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 40px;
+    box-sizing: border-box;
+    transition: margin-left 0.3s ease-in-out; 
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Dashboard container to align sidebar and content */
+.dashboard-container {
+    display: block;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 180px;
+    background-color: #edf2fb;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 20;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+}
+
+/* Sidebar active state */
+.sidebar a.active {
+    background-color: #F9FFA1 ;
+    color: #212AA5;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #0b1163;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+}
+
+.sidebar li
+    {list-style: none;}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: smaller;
+}
+
+.sidebar ul li
+    {margin-bottom: 5px;}
+
+/* Sidebar links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.sidebar ul li a:hover {
+    background-color: #c1d3fe;
+    color: #181d6b;
+    border-radius: 10px;
+}
+
+body.sidebar-collapsed .sidebar {
+    transform: translateX(-250px); /* Reduce to the sidebar width */
+}
+
+  /* Leads Monitoring Submenu */
+#leadsMonitoringSubmenu {
+    display: none;
+    padding-left: 20px;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-button {
+    position: fixed;
+    top: 50px;
+    left: 170px; 
+    background-color: #ccdbfd;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 50;
+    border-radius: 5px;
+    transition: left 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+  .sidebar-toggle-button:hover {
+    background-color: #F9FFA1;
+  }
+
+  /*  Style the span inside */
+  .sidebar-toggle-button span {
+    display: block;
+    line-height: 1;
+  }
+
+body.sidebar-collapsed .sidebar-toggle-button {
+    left: 10px; 
+}
+  
+body.sidebar-collapsed .content {
+    margin-left: 0; 
+}
+
+#leadsMonitoringToggle.active i {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.has-submenu .submenu {
+    display: none; 
+    list-style: none;
+    padding-left: 20px; 
+}
+
+.has-submenu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Logout link specific styling */
+#logoutLink {
+    color: #d9534f; 
+    font-weight: bold;
+    margin-top: 50px;
+
+}
+
+#logoutLink:hover {
+    background-color: #f8d7da;
+}
+
+/* Credits Styles */
+.dedication {
+    text-align: center;
+    margin: 40px;
+    font-size: larger;
+}
+
+.developers, .supervisors, .sponsors {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.developer-list, .supervisor-list, .sponsor-list, .adviser {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-bottom: 15px;
+}
+
+.developer-item, .supervisor-item, .sponsor-item, .adviser-item {
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden; /* Ensure image stays within the circle */
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title {
+    font-weight: bold;
+    font-size:larger;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #d7e3fc;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    margin: 15% auto;
+    width: 80%; 
+    max-width: 700px;
+    border-radius: 10px;
+    text-align: center;
+    color: #181d6b;
+    font-style: 'Montserrat', sans-serif;
+    font-size: smaller;
+}
+
+.modal-content h3 {
+    margin: 25px;
+    font-size: 1.5em;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    grid-column: 1 / span 2; /* Spans both columns */
+    text-align: right; 
+}
+
+.modal-buttons button {
+    text-align: center;     
+    font-size: small;
+    background-color: #edf2fb;
+    color: #212AA5;   
+    padding: 10px 20px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.modal-buttons button:hover {
+    background-color: #F9FFA1;
+    color: #212AA5; 
+    border-radius: 10px; 
+    box-shadow: 3px 3px 3px #212AA5;
+    transition: 0.3s ease;
+}
+
+#add_respo_button,
+#delete_respo_button,
+#edit_add_respo_button,
+#edit_delete_respo_button {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center; 
+    background-color: #ffff;
+    color: #212AA5;   
+    padding: 10px 20px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#add_respo_button:hover,
+#delete_respo_button:hover,
+#edit_add_respo_button:hover,
+#edit_delete_respo_button:hover {
+    background-color: #F9FFA1;
+    color: #212AA5; 
+    border-radius: 10px; 
+    box-shadow: 3px 3px 3px #212AA5;
+    transition: 0.3s ease;
+}
+
+/* Filter Style */
+.filterContainer form {
+    font-family:'Montserrat', sans-serif;
+    font-size: small;
+    background-color: #F9FFA1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2px; 
+    border: 1px solid #212AA5;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #0b1163;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.calendarfilterContainer {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F9FFA1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2px; 
+    border: 1px solid #212AA5;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #212AA5;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#filter_field,
+#search_term,
+#calendarFilter {
+    width: 220px; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: small;
+}
+
+.filter-buttons {
+    box-sizing: border-box;
+}
+
+.filter-buttons button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: smaller;
+    text-align: center; 
+    background-color: #edf2fb;
+    color: #212AA5;   
+    padding: 10px 20px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.filter-buttons button:hover {
+    background-color: #cddeff;
+    transition: 0.3s ease;
+}
+
+.radio-highlight {
+    background-color: #ffffff; 
+    padding: 5px 10px 5px 5px;      
+    border-radius: 20px;   
+    margin: 0px 3px; 
+}
+
+.sort-order-group 
+    {margin: 10px; }
+
+/* Export Button */
+.fairs-export-button,
+.prospect-export-button,
+.proposal-export-button,
+.meetings-export-button {
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    background-color: #edf2fb;
+    color: #212AA5;   
+    padding: 10px 20px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.fairs-export-button:hover,
+.prospect-export-button:hover,
+.proposal-export-button:hover,
+.meetings-export-button:hover {
+    opacity: .8;
+    background-color: #F9FFA1;
+    color: #212AA5; 
+    border-radius: 10px; 
+    transition: 0.3s ease;
+}
+
+/* Table Styles */
+#leads-table-container,
+#proposal-table-container,
+#contract-table-container,
+#exhibit-table-container,
+#meetings-table-container {
+    overflow-x: scroll;
+    margin: 7px 0px;
+}
+
+.leads-data-table,
+.meeting-data-table,
+.exhibit-data-table,
+.contract-data-table,
+.proposal-data-table {
+    width: 100%;
+    margin: 10px 0px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 3px #363636;
+    border-radius: 8px;
+    background-color: #fff;
+    white-space: pre wrap;
+    word-break: initial;
+  }
+  
+  /* Header Row */
+.leads-data-table thead tr,
+.meeting-data-table thead tr,
+.exhibit-data-table thead tr,
+.contract-data-table thead tr,
+.proposal-data-table thead tr {
+    color: #fff; 
+    text-align: center; /* Align header text to the left */
+    padding: 8px;
+}
+
+/* Background for Headers */
+.leads-data-table th,
+.meeting-data-table th,
+.exhibit-data-table th,
+.contract-data-table th,
+.proposal-data-table th {
+    background-color: #F9FFA1;
+    color: #212AA5; 
+    font-weight: 600; /* Bold header text */
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    padding: 8px;
+}
+
+/* Alternate Row Background */
+.leads-data-table tbody tr:nth-child(even),
+.meeting-data-table tbody tr:nth-child(even),
+.exhibit-data-table tbody tr:nth-child(even),
+.contract-data-table tbody tr:nth-child(even),
+.proposal-data-table tbody tr:nth-child(even) {
+    background-color:#edf2fb; 
+}
+  
+.leads-data-table tbody td,
+.meeting-data-table tbody td,
+.exhibit-data-table tbody td,
+.contract-data-table tbody td,
+.proposal-data-table tbody td {
+    font-size: 0.7rem;
+    color: black;
+    padding: 8px;
+}
+  
+/* No Data Message */
+.leads-data-table tbody tr td[colspan],
+.meeting-data-table tbody tr td[colspan],
+.exhibit-data-table tbody tr td[colspan],
+.contract-data-table tbody tr td[colspan],
+.proposal-data-table tbody tr td[colspan] {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+  
+/* Action Buttons (e.g., Delete) */
+.editLeadsButton,
+.editProposalButton,
+.editButtonFairs,
+.editMeetingButton {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #caffbf;
+    color: black;
+    padding: 8px 18px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025rem;
+}
+
+.deleteButton,
+.deleteProposalButton,
+.deleteButtonFairs,
+.deleteMeetingButton {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e57373; 
+    color: black;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.6rem;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.025rem;
+}
+
+.createProposalButton,
+.export-mom {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #abc4ff;
+    color: black;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+  
+.editLeadsButton:hover,
+.editProposalButton:hover,
+.editButtonFairs:hover,
+.editMeetingButton:hover
+    {background-color:rgb(79, 219, 51);
+    color: white;}
+
+.deleteButton:hover,
+.deleteProposalButton:hover,
+.deleteButtonFairs:hover,
+.deleteMeetingButton:hover
+    {background-color: #d32f2f;
+    color: white;} 
+
+.createProposalButton:hover,
+.export-mom:hover 
+    {background-color: #2833d2;
+    color: white;}
+
+/* Table Span */
+.leads-data-table td:nth-child(11),
+.leads-data-table td:nth-child(18),
+.proposal-data-table td:nth-child(13),
+.contract-data-table td:nth-child(14),
+.meeting-data-table td:nth-child(9),
+.meeting-data-table td:nth-child(10)  { 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-width: 200px; 
+}
+
+.leads-data-table td:nth-child(11) span,
+.leads-data-table td:nth-child(18) span,
+.proposal-data-table td:nth-child(13) span,
+.contract-data-table td:nth-child(14) span,
+.meeting-data-table td:nth-child(9) span,
+.meeting-data-table td:nth-child(10) span  {
+    display: inline; 
+    padding: 2px 10px; 
+    border-radius: 10px; 
+  }
+  
+  .status-NewLead {
+      background-color: #c1effd;
+      color: #00516a;
+  }
+  
+  .status-AttemptingContact {
+      background-color: #fdfebf;
+      color: #595c00;
+  }
+  
+  .status-Contacted {
+      background-color: #ffe6c9;
+      color: #8b4a00;
+  }
+  
+  .status-Interested {
+      background-color: #ff8fab;
+      color: #7d001f;
+  }
+  
+  .status-NotInterested {
+      background-color: #ffcbe8;
+      color: #750041;
+  }
+  
+  .status-Unqualified {
+      background-color: #ecd6fd;
+      color: #3c006b;
+  }
+  
+  .status-Follow-UpRequired {
+      background-color: #d9d2fd;
+      color: #160081;
+  }
+  
+  .status-NeedsAssessmentDone {
+      background-color: #abc4ff;
+      color: #00267f;
+  }
+  
+  .status-ProposalSent {
+      background-color: #ccdbfd;
+      color: #00206c;
+  }
+  
+  .status-NegotiationInProgress {
+      background-color: #e5c185;
+      color: #664100;
+  }
+  
+  .status-Closed-Won {
+      background-color: #caffbf;
+      color: #146e02;
+  }
+  
+  .status-Closed-Lost {
+      background-color: #ffcfce;
+      color: #6f0200;
+    }
+  
+  .status-OnHold {
+      background-color: #c2c2c2;
+      color: #2a2a2a;
+  }
+  
+  .status-ClientOnboarding {
+      background-color: #a2d2ff;
+      color: #002f5a;
+  }
+  
+  .status-RepeatBusinessOpportunity {
+      background-color: #faaac7;
+      color: #a8003e;
+  }
+
+/* Contract Status */
+.contract-status-Active,
+.proposal-status-Done,
+.meet-status-Done,
+.meet-priority-Low {
+    background-color: #caffbf; 
+    color: #0d4f00;
+}
+
+.contract-status-Expired,
+.meet-priority-High{
+    background-color: #ffcfce; 
+    color: #6f0200;
+}
+
+.contract-status-None,
+.proposal-status-Open,
+.meet-status-Open {
+    background-color: #a2d2ff; 
+    color: #002f5a;
+}
+
+.meet-priority-Medium {
+    background-color: #fdfebf;
+    color: #595c00;
+}
+
+/* Form Buttons */
+.form-buttons {
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    background-color: #edf2fb;
+    color: #212AA5;   
+    padding: 10px 20px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.form-buttons:hover {
+    opacity: .8;
+    background-color: #F9FFA1;
+    color: #212AA5; 
+    border-radius: 10px; 
+    transition: 0.3s ease;
+}
+
+/* Form Styles */
+.form label {
+    display: block;
+    margin: 10px 0px -10px;
+    font-weight: bold;
+    font-size: .6em;
+}
+
+Form input[type="text"],
+Form input[type="date"],
+Form textarea,
+Form select {
+    width: 85%; /* Full width input fields */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    color: black; /* Text color for inputs */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#addLeadsForm,
+#addFairsForm,
+#addMeetForm,
+#editProposalForm,
+#editMeetingForm,
+#editFairForm,
+#editLeadsForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 10px; /* Adds spacing between grid items (rows and columns) */
+}
+
+/* To span fields in both columns */
+#addLeadsForm > div:nth-child(9),
+#addLeadsForm > div:nth-child(10), 
+#addLeadsForm > div:nth-child(11), 
+#addLeadsForm > div:nth-child(12), 
+#addLeadsForm > div:nth-child(13),
+#addLeadsForm > div:nth-child(18),
+#addLeadsForm > div:nth-child(21),
+#addLeadsForm > div:nth-child(22),
+#editLeadsForm > div:nth-child(10), 
+#editLeadsForm > div:nth-child(11), 
+#editLeadsForm > div:nth-child(12),
+#editLeadsForm > div:nth-child(13), 
+#editLeadsForm > div:nth-child(18),
+#editLeadsForm > div:nth-child(21),
+#editLeadsForm > div:nth-child(22),
+#addFairsForm > div:nth-child(5),
+#addFairsForm > div:nth-child(6),
+#editFairForm > div:nth-child(6),
+#editFairForm > div:nth-child(7),
+#addMeetForm > div:nth-child(4),
+#addMeetForm > div:nth-child(5),
+#addMeetForm > div:nth-child(6),
+#addMeetForm > div:nth-child(9),
+#addMeetForm > div:nth-child(10), 
+#editMeetingForm > div:nth-child(5),
+#editMeetingForm > div:nth-child(6),
+#editMeetingForm > div:nth-child(7),
+#editMeetingForm > div:nth-child(10),
+#editMeetingForm > div:nth-child(11),
+#editProposalForm > div:nth-child(5)
+    { grid-column: 1 / span 2; }
+
+
+/* Style the select dropdown */
+#addLeadsForm select {
+    background-repeat: no-repeat;
+    background-position: right 8px top 50%;
+    background-size: 10px;
+    padding-right: 25px; /* Make space for the arrow */
+}
+
+#addLeadsForm input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#addLeadsForm label[for*="_monthly_est"] {
+    display: inline-block; /* Keep labels next to radio buttons */
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+/* Disabled Input Field */
+#addLeadsForm input:read-only {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+/* Contract Fields */
+#contractFields {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #abc4ff;
+    border-radius: 5px;
+}
+
+/* Statistics Cards */
+.statistic-cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    padding: 5px;
+    background-color: #fff; 
+    border-radius: 15px;
+    border: 1px solid #181d6b;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
+}
+
+/* Individual Card Style */
+.statistic-card {
+    box-sizing: border-box; 
+    border-radius: 15px;
+    padding: 5px;
+    text-align: left; 
+    width: auto;
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+}
+
+.statistic-card:hover {
+    transform: translateY(-3px);
+    background-color:#fbffbe ;
+    color: #212AA5; 
+    transition: 0.3s ease;
+}
+
+/* Icon Style */
+.statistic-icon {
+    width: 35px;
+    height: 35px; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statistic-icon img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.statistic-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #212AA5;
+    margin: 10px 0;
+    display: flex; /* For icon alignment */
+    align-items: center; /* Vertically align icon and number */
+    justify-content: center; 
+}
+
+.statistic-label {
+    font-size: .7em;
+    padding-left: 3px;
+    color: #212AA5;
+    display: flex; 
+    align-items: center; /* Vertically align icon and label */
+    justify-content: center; 
+}
+
+/* Graph Styles */
+.graphs1, .graphs2 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.lead-conversion,
+.prospect-pie-chart,
+.leads-growth-graph,
+.leads-won-lost-graph,
+.contract-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    flex: 1;
+    border: 1px solid #181d6b;
+    transition: transform 0.3s ease;
+}
+
+.lead-conversion:hover,
+.prospect-pie-chart:hover,
+.leads-growth-graph:hover,
+.leads-won-lost-graph:hover,
+.contract-container:hover{
+    transform: translateY(-5px);
+}
+
+.lead-conversion, 
+.prospect-pie-chart{
+   height:300px;
+}
+
+.lead-conversion, 
+.prospect-pie-chart,
+.leads-growth-graph {
+    width: 50%;
+}
+
+.leads-won-lost-graph,
+.contract-container {
+    width: 25%;
+}
+
+.graph-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    margin-top: -5px;
+}
+
+.graph-rectangle{
+    width: 100%;
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.graph-pie{
+    width: 100%;
+    height:220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.graph-square{
+    width: 100%;
+    height:200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lead-dashboard{
+    margin-top: -35px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+#pie-dashboard, 
+#lineChartLeadsGrowth, 
+#reportsBarGraph {
+    margin-top: -35px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.bar-contract {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Contract Table */
+.contract-container table {
+    width: 95%;
+    margin: -20px 5px 10px 5px;
+    border: 1px solid #181d6b;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: none;
+}
+
+/* Styles for Dropdown Menus */
+.yearDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px;
+    gap: 10px;
+  }
+  
+.leadsdropdown {
+    margin-top: -30px;
+}
+
+#leadswonyear {
+    margin-top: -10px;
+}
+
+.yearDropdown label {
+    font-size: .7em;
+    color: #666;
+    margin-right: 5px;
+}
+  
+.yearDropdown select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: .7em;
+    color: #333;
+    background-color: #fff;
+    appearance: none; 
+    cursor: pointer;
+}
+  
+.yearDropdown select:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.yearDropdown select:hover {
+    border-color: #999;
+}
+
+.yearDropdown select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"); /* Dark gray chevron */
+    background-position: right .75rem center;
+    background-size: 8px 10px;
+    background-repeat: no-repeat;
+    padding-right: 20px; 
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 7px; 
+}
+
+.pagination-button {
+    padding: 10px;
+    font-size: x-small;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: #333;
+    background-color: #fff; 
+    cursor: pointer;
+    display: inline-block; 
+    box-sizing: border-box; 
+    min-width: 20px; 
+    text-align: center; 
+}
+
+.pagination-button:hover 
+    {background-color: #d7e3fc;}
+
+
+.pagination-button.current {
+    background-color: #edf2fb;
+    color: #212AA5;
+    border-color: #181d6b;
+}
+
+.pagination-button.disabled {
+    color: #999;
+    border-color: #ddd;
+    background-color: #eee;
+    cursor: not-allowed;
+    pointer-events: none; 
+}
+
+.calendar-container {
+    font-family: Montserrat, sans-serif;
+    max-width: 900px; 
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #181d6b;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 5px 5px 3px #363636;
+}
+
+/* FullCalendar Theme */
+/* Header (Month Navigation, etc.) */
+.fc-header-toolbar {
+  background-color: #f8f9fa; 
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center; 
+}
+
+.fc-header-toolbar .fc-toolbar-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase; 
+  letter-spacing: 0.5px;
+}
+
+.fc-header-toolbar .fc-button {
+  background-color: #fff;
+  border: 1px solid #ced4da; 
+  color: #495057;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  box-shadow: none;
+  text-transform: capitalize;
+}
+
+.fc-header-toolbar .fc-button:hover {
+  opacity: .6;
+  color: #fff;
+  border-color: #adb5bd;
+}
+
+.fc-header-toolbar .fc-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+}
+
+.fc-header-toolbar .fc-button:active {
+  background-color: #dee2e6; 
+  border-color: #ced4da;
+}
+
+/* Day Grid Styling */
+.fc-daygrid-day-header {
+    background-color: #fff;
+    color: #6c757d;
+    border-bottom: 1px solid #ddd;
+    font-weight: 500;
+    padding: 8px;
+    text-align: center;
+  }
+  
+.fc-daygrid-day-frame 
+    { border: 1px solid #eee; }
+  
+  
+.fc-daygrid-day-top 
+    { padding: 8px; }
+  
+.fc-daygrid-day-number {
+    font-size: 1em;
+    color: #495057;
+  }
+  
+.fc-daygrid-event-harness 
+  { padding: 2px; }
+  
+.fc-daygrid-event {
+    border: none;
+    border-radius: 4px;
+    padding: 3px 5px;
+    margin-bottom: 2px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+.fc-daygrid-event:hover 
+    { opacity: 0.9; }
+
+.fc-day-today.fc-daygrid-day{
+    background-color: #fbffbe;
+    }
+  
+.fc-day-past 
+    { color: #777; }
+  
+  /* Event Styling (General) */
+.fc-event {
+    border-radius: 4px;
+    padding: 3px 5px;
+    margin-bottom: 2px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+/* Custom Event Colors */
+.fc-event.fair {
+    opacity: .7;
+    background: linear-gradient(to right, #fdffb6, #ebf21d) ; 
+}
+
+.fc-event.fair:hover {
+    opacity: 1;
+}
+
+.fc-event.fair .fc-event-title {
+    color: #424242 ; 
+}
+
+.fc-event.contract-start {
+    background-color: #90b9ef ;
+    color: #000 !important;
+    opacity: .8 ;
+}
+
+.fc-event.contract-end {
+    background-color: #2468c1 ;
+    color: #fff ; 
+    opacity: .7 ;
+}
+
+.fc-event.contract-start:hover,
+.fc-event.contract-end:hover {
+    opacity: 1 ;
+    z-index: 10;
+}
+
+.fc-col-header-cell.fc-week {
+    background-color: #f0f0f0;
+    color: #777;
+    text-align: center;
+  }
+
+/* TABLES POP UP */
+.swal-custom-popup {
+    border-radius: 5px;
+}
+
+.swal-custom-popup .swal2-title,       /* title text */
+.swal-custom-popup .swal2-html-container { /* main text content */
+    color: #181d6b !important;
+}
+
+.swal-custom-popup .swal2-confirm, 
+.swal-custom-popup .swal2-cancel {    
+    background-color: #fbffbe !important; 
+    color: #181d6b !important; 
+    border: 1px solid #e0e5a0 !important;
+    margin-top: -10px;
+    transform: scale(.8); 
+}
+
+.swal-custom-popup .swal2-confirm:hover,
+.swal-custom-popup .swal2-cancel:hover{
+    opacity: .8;
+}
+
+.swal-custom-popup .swal2-icon {
+    transform: scale(.8); 
+    margin: 10px auto;
+}
+
+.swal-custom-popup .swal2-title {
+    font-size: 1.3em !important;
+}
+
+.swal-custom-popup .swal2-html-container {
+    font-size: 1em !important; 
+}
+
+.swal-custom-popup .swal2-popup {
+    padding: 1.5em 1em 2em 1em !important; 
+}
+
+/* Calendar Pop up */
+.swal2-title.my-swal-title {
+    margin-bottom: -20px;
+    color: #181d6b;
+    font-size: 1.5rem;
+}
+
+.swal2-html-container.my-swal-content {
+    font-size: 1rem; 
+    color: #181d6b; 
+    text-align: center; 
+}
+
+.swal2-html-container.my-swal-content b {
+    font-weight: bold; 
+    color: #181d6b;
+}
+
+.swal2-confirm {
+    background-color: #fbffbe; 
+    color: #181d6b; 
+    border: 1px solid #e0e5a0 !important; 
+    border-radius: 5px ; 
+    font-size: 16px ; 
+    margin-top: -10px;
+    cursor: pointer ; 
+    transform: scale(.8); 
+}
+
+.swal2-confirm:hover {
+    opacity: .8; 
+}
+
+.swal2-popup.swal2-show {
+    animation: swal2-fadeInScaleUp 0.3s forwards;
+}
+
+@keyframes swal2-fadeInScaleUp {
+    0% {
+        transform: scale(0.4); /* Start scaled down */
+        opacity: 0;       /* Start transparent */
+    }
+    100% {
+        transform: scale(1);   /* End at normal size */
+        opacity: 1;         /* End fully visible */
+    }
+}
+
